@@ -40,7 +40,7 @@ sun:
 
 linux:
 #	@$(MAKE) CC=gcc CFLAGS="-DLINUX -O2 -pipe -fomit-frame-pointer -Wunused -I../include -I/usr/local/include/ruby-1.9.0 -I/usr/local/include/ruby-1.9.0/i686-linux/ruby" LDFLAGS="-s -L../lib -L/usr/local/lib -ldao -lcrypt -lresolv -ldl -lruby -rdynamic" $(EXE)
-	@$(MAKE) CC=gcc CFLAGS="--debug -DLINUX -O2 -pipe -fomit-frame-pointer -Wunused -I../include" LDFLAGS="-L../lib -ldao -lcrypt -lresolv -ldl -rdynamic -L/usr/local/lib" $(EXE)
+	@$(MAKE) CC=gcc CFLAGS="-m32 --debug -DLINUX -O2 -pipe -fomit-frame-pointer -Wunused -I../include" LDFLAGS="-m32 -L../lib -ldao -lcrypt -lresolv -ldl -rdynamic -L/usr/local/lib" $(EXE)
 solaris:
 	@$(MAKE) CC=gcc CFLAGS="-DSOLARIS -DSYSV -O2 -pipe -fomit-frame-pointer -Wunused -I../include" LDFLAGS="-s -L../lib -ldao -ltermcap -lsocket -lnsl -lresolv -lelf -ldl" $(EXE)
 
